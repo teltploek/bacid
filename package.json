@@ -56,7 +56,8 @@
     "socket.io-client": "^1.1.0",
     "tokenthrottle": "^1.1.0",
     "twitter-text": "^1.10.0",
-    "waypoints": "^3.1.1"
+    "waypoints": "^3.1.1",
+    "aws-sdk": "~2.2.1"
   },
   "devDependencies": {
     "babel-eslint": "^4.1.3",
