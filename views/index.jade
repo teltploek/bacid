@@ -36,6 +36,7 @@ html
             .fill.fix
         .inset.shadow-1
             p.text 0%
+      canvas#analyser(width='50', height='50')
       form.shadow-1
         input#message(type='text', maxlength='250', autofocus='true', autocomplete='off',
           autocorrect='on', autocapitalize='on', spellcheck='true')
@@ -47,5 +48,6 @@ html
         ga('create', '!{trackingId}', 'auto')
         ga('send', 'pageview')
       script(type='text/javascript', async, src='//www.google-analytics.com/analytics.js')
+    script(type='text/javascript', src='recorder.js')
     script(type='text/javascript', src='client.js')
     

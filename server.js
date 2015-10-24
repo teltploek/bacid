@@ -89,6 +89,8 @@ app
   .get('/', (req, res) =>
       res.render('index', { theme: req.cookies.theme, trackingId: config.gaTrackingId }))
   .get('/client.js', browserify(__dirname + '/client/index.js', browserifyOpts))
+  .get('/recorder.js', browserify(__dirname + '/client/recorder.js', browserifyOpts))
+  .get('/recorderWorker.js', browserify(__dirname + '/client/recorderWorker.js', browserifyOpts))
   .get('/styles.css', serveCss(__dirname + '/css/styles.css'))
 
 app.use(serveStatic('public'))
