@@ -367,9 +367,14 @@ header .actions {
   padding: 0 0 4px;
 }
 
-.message-area,
-.message-meta {
-  display: none !important;
+#message-list li .message-area,
+#message-list li .message-meta {
+  display: none;
+}
+
+#message-list li.displayed:hover .message-area,
+#message-list li.displayed:hover .message-meta {
+  display: flex;
 }
 
 .message-overflow {
