@@ -28,6 +28,9 @@ const servers = []
 let httpServer
 let listenPort
 
+//If $PORT is defined used that. Else the one defined in conf.json
+config.port = (process.env.PORT || config.port;
+
 if (config.sslCert) {
   if (!config.sslKey || !config.sslCaBundle || !config.canonicalHost || !config.sslPort) {
     throw new Error('sslCert, sslKey, sslCaBundle, sslPort, and canonicalHost must all be ' +
