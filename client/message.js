@@ -231,7 +231,7 @@ class MessageList {
   }
 
   muteUser(userId) {
-    this._mutes.add(userId)
+    //this._mutes.add(userId)
     this._tracker.onUserMuted()
 
     const userMessages = []
