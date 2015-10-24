@@ -18,7 +18,7 @@ const MESSAGE_HTML = [
     '<div class="filmstrip"></div>',
     '<button class="save shadow-1" title="Save as GIF"></button>',
   '</div>',
-  '<p>',
+  '<p class="message-area">',
   '<div class="message-meta">',
     '<div class="dropdown">',
       '<button class="toggle message-overflow" title="Message options"></button>',

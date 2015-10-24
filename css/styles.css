@@ -7,6 +7,7 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  background-color: #000;
 }
 
 body {
@@ -78,7 +79,7 @@ h6 {
 
 a, a:visited, a:hover, a:focus, a:active {
   font-weight: inherit;
-  color: #F06292;
+  color: #b4d455;
 }
 
 .dark a, .dark a:visited, .dark a:hover, .dark a:focus,  .dark a:active {
@@ -90,7 +91,7 @@ button {
 }
 
 header {
-  background-color: #F06292;
+  background-color: #b4d455;
   color: #ffffff;
   display: flex;
   height: 48px;
@@ -240,10 +241,10 @@ header .actions {
 
 #message-list {
   list-style-type: none;
-  margin: 56px auto 116px;
+  margin: 48px 0 0 0;
   padding: 0;
   min-width: 640px;
-  width: 1400px;
+  width: 100% !important;
   border-radius: 2px;
 }
 
@@ -319,7 +320,7 @@ header .actions {
   border: 1px solid rgba(0, 0, 0, 0.54);
   outline: none;
   border-radius: 2px;
-  background-color: #F06292;
+  background-color: #b4d455;
   opacity: 0;
   visibility: hidden;
 
@@ -343,7 +344,9 @@ header .actions {
 .save[disabled] {
   background-color: #E91E63;
 }
-
+#message-list li {
+  display: inline-block;
+}
 #message-list li p {
   flex: 1;
   padding: 8px;
@@ -352,12 +355,21 @@ header .actions {
   overflow-wrap: break-word;
 }
 
+#message-list li.displayed {
+  float: left;
+}
+
 #message-list li .message-meta {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
   padding: 0 0 4px;
+}
+
+.message-area,
+.message-meta {
+  display: none !important;
 }
 
 .message-overflow {
@@ -468,7 +480,7 @@ footer .progress {
   border: 1px solid rgba(0, 0, 0, 0.54);
   outline: none;
   border-radius: 2px;
-  background-color: #F06292;
+  background-color: #b4d455;
   opacity: 0;
   visibility: hidden;
 
@@ -534,7 +546,7 @@ form {
 }
 
 #message:active:active, #message:focus:focus {
-  border-color: #F06292;
+  border-color: #b4d455;
   border-width: 2px;
   padding: 4px 2px 3px 2px; /* account for extra border size */
 }
@@ -575,7 +587,7 @@ form {
 
 #send {
   border: 0;
-  background-color: #F06292;
+  background-color: #b4d455;
   /* match the form's border radius on the outer corners */
   border-radius: 0 2px 2px 0;
   margin: 0 0 0 4px;
@@ -628,7 +640,7 @@ form {
 
 .progress .circle .mask .fill {
   clip: rect(0px, 24px, 48px, 0px);
-  background-color: #F06292;
+  background-color: #b4d455;
 }
 
 .progress .inset {
