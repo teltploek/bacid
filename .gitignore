@@ -1,6 +1,6 @@
+.c9/
 node_modules
 cert
-conf.json
 npm-debug.log
 .DS_Store
 *.swp
