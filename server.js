@@ -13,6 +13,7 @@ import userCounter from './lib/user-counter'
 import createFfmpegRunner from './lib/ffmpeg-runner'
 import ChatSockets from './lib/chat-sockets'
 import config from './conf.json'
+import archive from './routes/archive';
 
 const userIdKey = config.idKey
 if (!userIdKey) {
@@ -94,6 +95,9 @@ app
   .get('/styles.css', serveCss(__dirname + '/css/styles.css'))
 
 app.use(serveStatic('public'))
+
+
+app.use('/archive', archive());
 
 const readyPromise = new Promise((resolve, reject) => {
   userCounter(io)

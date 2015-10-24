@@ -104,6 +104,9 @@ createDropdown(document.querySelector('header .dropdown'), {
     showAbout()
     tracker.onShowAbout()
   },
+  toArchive: () => {
+    window.location.href = '/archive';
+  }
 })
 
 const updateTheme = newTheme => {

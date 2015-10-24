@@ -1,0 +1,22 @@
+html
+	head
+		title=title
+		link(type='text/css', rel='stylesheet',href='//fonts.googleapis.com/css?family=Roboto:300,500,400|Material+Icons')
+		link(type='text/css', rel='stylesheet', href='/styles.css?20150927')
+		link(type='image/x-icon', rel='icon', href='/favicon.ico')
+		meta(name='theme-color', content='#212121')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		meta(content='width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0', name='viewport')
+		meta(content='yes', name='mobile-web-app-capable')
+		meta(content='yes', name='apple-mobile-web-app-capable')
+	body
+		h1(style="text-align: center;")= message
+		ul(id="message-list")
+		each video in videos
+			li(class="displayed" style="float: left;")
+				div(class="video-container" style="width: 200px; height: 150px")
+					a(href="/archive/" + video.key)
+						div(class="filmstrip" style="background-image: url(" + video.url + ")")
+	footer
+		script(type='text/javascript', src='/recorder.js')
+		script(type='text/javascript', src='/client.js')
