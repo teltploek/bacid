@@ -18,6 +18,7 @@ const MESSAGE_HTML = [
     '<div class="filmstrip"></div>',
     '<button class="save shadow-1" title="Save as GIF"></button>',
   '</div>',
+  '<time></time>',
   '<p class="message-area">',
   '<div class="message-meta">',
     '<div class="dropdown">',
@@ -27,7 +28,6 @@ const MESSAGE_HTML = [
       '</div>',
     '</div>',
     '<div class="identicon"></div>',
-    '<time></time>',
   '</div>',
 ].join('')
 /* eslint-enable indent */
@@ -45,6 +45,7 @@ class Message {
     this.videoContainer = this.root.querySelector('.video-container')
     this.filmstrip = this.root.querySelector('.filmstrip')
     this.saveButton = this.root.querySelector('.save')
+    this.messageArea = this.root.querySelector('.message-area')
     this.chatText = this.root.querySelector('p')
     this.timestamp = this.root.querySelector('time')
     // placeholder div so it can be replaced with the real thing when bound
@@ -86,6 +87,9 @@ class Message {
     this.filmstrip.style['background-image'] = `url('${this._srcUrl}')`
 
     this.chatText.innerHTML = text
+    if (text === '') {
+      this.messageArea.parentElement.removeChild(this.messageArea);
+    }
 
     const sentDate = new Date(sent)
     this.timestamp.datetime = sentDate.toISOString()

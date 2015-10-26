@@ -351,6 +351,7 @@ header .actions {
   flex: 1;
   padding: 8px;
   max-width: 200px;
+  width: 200px;
   font-size: 11px;
 
   word-wrap: break-word;
@@ -359,18 +360,42 @@ header .actions {
 
 #message-list li.displayed {
   float: left;
+  position: relative;
 }
 
 #message-list li .message-meta {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
   padding: 0 0 4px;
+
+  font-size: 11px;
 }
 
 #message-list li .message-area,
-#message-list li .message-meta,
+#message-list li .message-meta {
+  background: white;
+  position: absolute;
+  bottom: 0;
+  opacity: 0.5;
+}
+
+#message-list li .message-meta {
+  background: transparent;
+  text-align: right;
+}
+
+#message-list li time {
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  font-size: 11px;
+  color: white;
+}
+
+
 #message-list li .message-meta .dropdown,
 #message-list li .message-meta .identicon {
   display: none;
@@ -379,6 +404,7 @@ header .actions {
 #message-list li.displayed:hover .message-area,
 #message-list li.displayed:hover .message-meta {
   display: flex;
+  opacity: 1;
 }
 
 .message-overflow {
