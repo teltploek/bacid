@@ -350,6 +350,8 @@ header .actions {
 #message-list li p {
   flex: 1;
   padding: 8px;
+  max-width: 200px;
+  font-size: 11px;
 
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -368,7 +370,9 @@ header .actions {
 }
 
 #message-list li .message-area,
-#message-list li .message-meta {
+#message-list li .message-meta,
+#message-list li .message-meta .dropdown,
+#message-list li .message-meta .identicon {
   display: none;
 }
 
