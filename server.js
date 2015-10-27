@@ -96,7 +96,6 @@ app
 
 app.use(serveStatic('public'))
 
-
 app.use('/archive', archive());
 
 const readyPromise = new Promise((resolve, reject) => {

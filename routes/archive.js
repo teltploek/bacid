@@ -5,7 +5,6 @@ export default function() {
     var archive = Router();
 
     archive.get('/', (req, res) => {
-
         archiver.getFromArchive(function(err, data) {
             res.render('archiveOverview', {
                 title: "The Archives",
@@ -17,7 +16,6 @@ export default function() {
     });
 
     archive.get('/:s3key', (req, res) => {
-
         res.render('archivedVideo', {
             title: req.params.s3key + " from the archives",
             message: req.params.s3key + " from the archives",
