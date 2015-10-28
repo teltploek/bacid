@@ -12,7 +12,7 @@ import initMessageList from './message'
 import theme from './theme'
 import createAbout from './about'
 import Tracker from './analytics'
-import soundAnalyzer from './sound-analyzer'
+//import soundAnalyzer from './sound-analyzer'
 
 const io = createSocketIoClient()
 const muteSet = new StoredSet('mutes')
@@ -188,7 +188,7 @@ io.on('ack', function(ack) {
 })
 
 cameraPreview(document.querySelector('#preview').parentNode, tracker)
-soundAnalyzer();
+//soundAnalyzer();
 
 document.addEventListener('visibilitychange', () => {
   document.body.classList.toggle('backgrounded', document.hidden)
